@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Theme Coding Standards">
+	<description>A custom set of code standard rules to check for WordPress themes.</description>
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<rule ref="NeutronRuleset"/>
+	<rule ref="WordPress"/>
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Docs" />
+	<rule ref="WordPress-Extra" />
+
+	<!-- Expecting this rule to overwrite the same ref in vendor/automattic/phpcs-neutron-ruleset/NeutronRuleset/ruleset.xml on line 86 -->
+	<rule ref="WordPress.Security.EscapeOutput.OutputNotEscaped">
+		<severity>5</severity>
+		<type>error</type>
+	</rule>
+
+</ruleset>

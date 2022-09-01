@@ -1,0 +1,20 @@
+{
+  "name": "phpcs-test/phpcs-test",
+  "description": "A phpcs test.",
+  "type": "wordpress-theme",
+  "license": "GPL-3.0-or-later",
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "wp-coding-standards/wpcs": "^2.3",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "automattic/phpcs-neutron-ruleset": "^3.4"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4.13"
+    },
+    "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
